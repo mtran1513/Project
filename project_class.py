@@ -66,7 +66,7 @@ description: {}'.format(self.name,
                         self.damage,
                         self.location.name,
                         self.description)
-        return(output)
+        return output
 
 
     def examine(self):
@@ -76,6 +76,23 @@ description: {}'.format(self.name,
     def drop(self, room):
         self.location = room
 
+
+class Potion():
+    name = ''
+    discription = ''
+    location = ''
+    modifier = 0
+    
+    def __init__(self, name, discription, location, modifier):
+        self.name = name
+        self.discription = discription
+        self.location = location
+        self.modifier = modifier
+        
+    def __str__(self):
+        output = 'name: {}, discription: {}, location: {}, \
+        modifier: {}'.format(self.name, self.discription, self.location, self.modifier)
+        return output
 
 class Trainer():
     name = ''
