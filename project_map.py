@@ -6,16 +6,17 @@ import random
 v_city = Room('Viridian City', {}, [])
 route_1 = Room('route 1', {}, [])
 oak = Room('oak\'s office', {}, [])
+broom = Room('broom closet', {}, [])
 
-oak.doors({'north': route_1})
-route_1.doors({'south': oak, 'north': v_city})
 v_city.doors({'south': route_1})
+route_1.doors({'south': oak, 'north': v_city})
+oak.doors({'north': route_1})
 
 starters = []
-all_pokes = []
 bulb = Pokemon('bulbasaur', route_1, {'absorb': 5}, 'gary\'s grass starter')
 squirt = Pokemon('squirtle', route_1, {'bubble': 5}, 'gary\'s water starter')
 charm = Pokemon('charmander', route_1, {'ember': 5}, 'gary\'s fire starter')
+pika = Pokemon('pikachu', route_2, {'shock': 20}, 'mike\'s pikachu')
 bulbasaur = Pokemon('bulbasaur', oak, {'absorb': 20}, 'The grass starter')
 squirtle = Pokemon('squirtle', oak, {'bubble': 20}, 'The water starter')
 charmander = Pokemon('charmander', oak, {'ember': 20}, 'The fire starter')
@@ -27,7 +28,7 @@ weedle = Pokemon('weedle', v_forest2, {'posionsting': 20}, 'hairy bug pokemon')
 metapod = Pokemon('metapod', v_forest3, {'stringshot': 10}, 'cocoon pokemon')
 kakuna = Pokemon('kakuna', v_forest5, {'harden': 5}, 'cocoon  pokemon')
 pikachu = Pokemon('pikachu', v_forest6, {'shock': 30, 'tackle': 20}, 'mouse  pokemon')
-Scyther = Pokemon('Scyther', V_forest6, {'slash': 35, 'cut': 25}, 'mantis pokemon')
+scyther = Pokemon('scyther', V_forest6, {'slash': 35, 'cut': 25}, 'mantis pokemon')
 # cubone = 
 # onix = 
 # diglett = 
@@ -37,6 +38,7 @@ Scyther = Pokemon('Scyther', V_forest6, {'slash': 35, 'cut': 25}, 'mantis pokemo
 oak.add_pokemon(bulbasaur)
 oak.add_pokemon(squirtle)
 oak.add_pokemon(charmander)
+broom.add_pokemon(mew)
 starters.append(bulb)
 starters.append(squirt)
 starters.append(charm)
@@ -48,36 +50,36 @@ rb1.weapon = random.choice(starters)
 rb1.location = route_1
 rb1.inventory = [potion] 
 
-bt1 = Trainer('Bug Trainer Bryce')
+bt1 = Trainer('bug_trainer_bryce')
 bt1.weapon = weedle
-bt1.location = V_forrest1
+bt1.location = v_forrest1
 
-bt2 = Trainer('Bug Trainer Dillon')
-bt2.weapon = Scyther
-bt2.location = V_forrest4
+bt2 = Trainer('bug_trainer_dillon')
+bt2.weapon = scyther
+bt2.location = v_forrest4
 bt2.inventory = [potion]
 
-bt3 = Trainer('Bug Trainer Zak')
+bt3 = Trainer('bug_trainer_zak')
 bt3.weapon = butterfree
-bt3.location = V_forrest6
+bt3.location = v_forrest6
 bt3.inventory = [potion]
 
-at2 = Trainer('Ace Trainer Mike')
-at2.weapon = pikachu
-at2.location = route 2
+at2 = Trainer('ace_trainer_mike')
+at2.weapon = pika
+at2.location = route_2
 at2.inventory = [super_potion]
 
-hik = Trainer('Hiker David')
+hik = Trainer('hiker_david')
 hik.weapon = diglett
 hik.location = pcg4
 hik.inventory = [potion]
 
-at1 = Trainer('Ace Trainer Grant')
+at1 = Trainer('ace_trainer_grant')
 at1.weapon = cubone
 at1.location = pcg7
 at1.inventory = [super_potion]
 
-gl = Trainer('Gym Leader Brock')
+gl = Trainer('gym_leader_brock')
 gl.weapon = onix
 gl.location = pcg9
 gl.inventory = [super_potion]
