@@ -57,7 +57,7 @@ class Pokemon:
         self.name = name
         self.location = location
         self.description = description
-        self.damage = damage
+        self.damage = range(damage - 5: damage + 5)
 
 
     def __str__(self):
@@ -186,6 +186,7 @@ class Trainer():
         else:
             print('\nYou don\'t have that!\n')
 
+import random
 
     def attack(self, command, move):
         if len(command) < 2:
@@ -202,7 +203,7 @@ class Trainer():
                    enemy.location == self.location:
                     damage = self.weapon.damage[move]
                     if damage > 0:
-                        enemy.health -= damage
+                        enemy.health -= random.choice(damage)
                     print('\n{} has been hit for '.format(
                         enemy.name) + str(damage) + '!\n')
                     if enemy.health <= 0:
