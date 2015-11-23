@@ -1,4 +1,5 @@
 import project_map
+import random
 
 
 class Room():
@@ -185,8 +186,6 @@ class Trainer():
                 return
         else:
             print('\nYou don\'t have that!\n')
-
-import random
 
     def attack(self, command, move):
         if len(command) < 2:
