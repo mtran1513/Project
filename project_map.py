@@ -28,6 +28,11 @@ metapod = Pokemon('metapod', v_forest3, {'stringshot': 10}, 'cocoon pokemon')
 kakuna = Pokemon('kakuna', v_forest5, {'harden': 5}, 'cocoon  pokemon')
 pikachu = Pokemon('pikachu', v_forest6, {'shock': 30, 'tackle': 20}, 'mouse  pokemon')
 Scyther = Pokemon('Scyther', V_forest6, {'slash': 35, 'cut': 25}, 'mantis pokemon')
+# cubone = 
+# onix = 
+# diglett = 
+# butterfree = 
+
 
 oak.add_pokemon(bulbasaur)
 oak.add_pokemon(squirtle)
@@ -41,7 +46,41 @@ player = Trainer('ash')
 rb1 = Trainer('gary')
 rb1.weapon = random.choice(starters)
 rb1.location = route_1
+rb1.inventory = [potion] 
 
+bt1 = Trainer('Bug Trainer Bryce')
+bt1.weapon = weedle
+bt1.location = V_forrest1
+
+bt2 = Trainer('Bug Trainer Dillon')
+bt2.weapon = Scyther
+bt2.location = V_forrest4
+bt2.inventory = [potion]
+
+bt3 = Trainer('Bug Trainer Zak')
+bt3.weapon = butterfree
+bt3.location = V_forrest6
+bt3.inventory = [potion]
+
+at2 = Trainer('Ace Trainer Mike')
+at2.weapon = pikachu
+at2.location = route 2
+at2.inventory = [super_potion]
+
+hik = Trainer('Hiker David')
+hik.weapon = diglett
+hik.location = pcg4
+hik.inventory = [potion]
+
+at1 = Trainer('Ace Trainer Grant')
+at1.weapon = cubone
+at1.location = pcg7
+at1.inventory = [super_potion]
+
+gl = Trainer('Gym Leader Brock')
+gl.weapon = onix
+gl.location = pcg9
+gl.inventory = [super_potion]
 
 trainer_list = []
 a = list(globals().values())
