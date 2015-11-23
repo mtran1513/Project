@@ -28,6 +28,9 @@ metapod = Pokemon('metapod', v_forest3, {'stringshot': 10}, 'cocoon pokemon')
 kakuna = Pokemon('kakuna', v_forest5, {'harden': 5}, 'cocoon  pokemon')
 pikachu = Pokemon('pikachu', v_forest6, {'shock': 30, 'tackle': 20}, 'mouse  pokemon')
 Scyther = Pokemon('Scyther', V_forest6, {'slash': 35, 'cut': 25}, 'mantis pokemon')
+butterfree = 
+cubone = 
+onix = 
 
 oak.add_pokemon(bulbasaur)
 oak.add_pokemon(squirtle)
@@ -42,6 +45,33 @@ rb1 = Trainer('gary')
 rb1.weapon = random.choice(starters)
 rb1.location = route_1
 
+bt1 = Trainer('Bug Trainer Bryce')
+bt1.weapon = weedle
+bt1.location = V_forrest1
+
+bt2 = Trainer('Bug Trainer Dillon')
+bt2.weapon = Scyther
+bt2.location = V_forrest4
+
+bt3 = Trainer('Bug Trainer Zak')
+bt3.weapon = butterfree
+bt3.location = V_forrest6
+
+at2 = Trainer('Ace Trainer Mike')
+at2.weapon = pikachu
+at2.location = route 2
+
+hik = Trainer('Hiker David')
+hik.weapon = diglett
+hik.location = pcg4
+
+at1 = Trainer('Ace Trainer Grant')
+at1.weapon = cubone
+at1.location = pcg7
+
+gl = Trainer('Gym Leader Brock')
+gl.weapon = onix
+gl.location = pcg9
 
 trainer_list = []
 a = list(globals().values())
@@ -60,3 +90,4 @@ def move_others():
                 et.attack(['attack', 'ash'], 'bubble')
             elif 'ember' in move:
                 et.attack(['attack', 'ash'], 'ember')
+
