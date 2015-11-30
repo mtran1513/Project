@@ -26,6 +26,8 @@ def main():
             player.remove_from_inventory(command)
         elif command[0] == 'list':
             print(player)
+        elif command[0] == 'use':
+            player.use(command)
         elif command[0] == 'moves':
             if player.weapon == None:
                 print('\nYou have not chosen a pokemon!\n')
