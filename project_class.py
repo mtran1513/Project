@@ -81,13 +81,11 @@ description: {}'.format(self.name,
 class Potion():
     name = ''
     discription = ''
-    location = ''
     modifier = 0
     
-    def __init__(self, name, discription, location, modifier):
+    def __init__(self, name, discription, modifier):
         self.name = name
         self.discription = discription
-        self.location = location
         self.modifier = modifier
         
     def __str__(self):
