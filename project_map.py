@@ -4,10 +4,10 @@ from project_class import Trainer
 import random
 
 v_city = Room('Viridian City', {}, [])
-route_1 = Room('route 1', {}, [])
-route_2 = Room('route 2', {}, [])
-oak = Room('oak\'s office', {}, [])
-broom = Room('Broom Closet', {}, [])
+route_1 = Room('Route 1', {}, [])
+route_2 = Room('Route 2', {}, [])
+oak = Room('Oak\'s office', {}, [])
+broom = Room('Broom closet', {}, [])
 v_city_mart = Room('Viridian City Mart', {}, [])
 v_city_gym = Room('Viridian City Gym!', {}, [])
 v_forest1 = Room('Viridian Forest 1', {}, [])
@@ -33,7 +33,7 @@ oak.doors({'north': route_1, 'east': broom})
 broom.doors({'west': oak})
 route_1.doors({'south': oak, 'north': v_city})
 v_city.doors({'south': route_1, 'north': route_2, 'east': v_city_gym, 'west': v_city_mart})
-route_2({'south': v_city, 'north': v_forest2})
+route_2.doors({'south': v_city, 'north': v_forest2})
 v_city_mart.doors({'east': v_city})
 v_city_gym.doors({'west': v_city})
 v_forest1.doors({'north': v_forest6, 'east': v_forest2})
@@ -61,9 +61,9 @@ squirt = Pokemon('squirtle', route_1, {'bubble': 5}, 'gary\'s water starter')
 charm = Pokemon('charmander', route_1, {'ember': 5}, 'gary\'s fire starter')
 weedle2 = Pokemon('weedle', v_forest1, {'poisonsting': 20}, 'bryce\'s hairy bug pokemon')
 pika = Pokemon('pikachu', route_2, {'volttackle': 20}, 'mike\'s pikachu')
-scyth = Pokemon('scyther', V_forest6, {'slash': 35}, 'dillon\'s mantis pokemon')
+scyth = Pokemon('scyther', v_forest6, {'slash': 35}, 'dillon\'s mantis pokemon')
 cubone = Pokemon('cubone', pcg7, {'bonemerang': 36}, 'grant\'s lonely pokemon')
-onix = Pokemon('onix', pcg9, {'irontail': 40,}, 'brock\'s rock snake pokemon')
+onix = Pokemon('onix', brock, {'irontail': 40,}, 'brock\'s rock snake pokemon')
 diglett = Pokemon('diglett', pcg4, {'dig': 35,}, 'david\'s mole pokemon')
 butterfree = Pokemon('butterfree', v_forrest6, {'charm': 1}, 'zak\'s butterfly pokemon')
 
@@ -126,7 +126,7 @@ at1.inventory = [super_potion]
 
 gl = Trainer('gym_leader_brock')
 gl.weapon = onix
-gl.location = pcg9
+gl.location = brock
 gl.inventory = [super_potion]
 
 trainer_list = []
