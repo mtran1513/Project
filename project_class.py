@@ -94,6 +94,12 @@ class Potion():
         output = 'name: {}, discription: {}, location: {}, \
         modifier: {}'.format(self.name, self.discription, self.location, self.modifier)
         return output
+        
+    def examine(self):
+        return self.description
+
+    def drop(self, room):
+        self.location = room
 
 class Trainer():
     name = ''
@@ -170,8 +176,19 @@ class Trainer():
                         return
                     else:
                         print('\nYou don\'t have that!\n')
-
-
+    def use(self, command):
+        if len(command) < 2:
+            print('\n{} what?\n'.format(
+                command[0][0].upper() + command[0][1:]))
+            return
+         for thing in self.inventory:
+            if command[1] == thing.name:
+                self.health += thing.modifier
+                self.inventory.remove(thing)
+                print('\nYou used a {}.\n'.format(
+                    thing.description))
+                return
+            
     def wield(self, command):
         if len(command) < 2:
             print('\n{} what?\n'.format(
