@@ -188,7 +188,9 @@ class Trainer():
                 print('\nYou used a {}.\n'.format(
                     thing.description))
                 return
-            
+        else:
+            print('\nYou don\'t have that!\n')
+
     def wield(self, command):
         if len(command) < 2:
             print('\n{} what?\n'.format(
