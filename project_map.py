@@ -77,7 +77,7 @@ caterpie = Pokemon('caterpie', v_forest2, {'tackle': 20}, 'worm pokemon')
 weedle = Pokemon('weedle', v_forest2, {'posionsting': 20}, 'hairy bug pokemon')
 metapod = Pokemon('metapod', v_forest3, {'harden': 5}, 'cocoon pokemon')
 kakuna = Pokemon('kakuna', v_forest5, {'harden': 5}, 'cocoon  pokemon')
-scyther = Pokemon('scyther', V_forest6, {'slash': 35, 'cut': 20}, 'mantis pokemon'
+scyther = Pokemon('scyther', v_forest6, {'slash': 35, 'cut': 20}, 'mantis pokemon')
 pikachu = Pokemon('pikachu', v_forest6, {'volttackle': 30, 'tackle': 20}, 'mouse  pokemon')
 
 oak.add_pokemon(bulbasaur)
