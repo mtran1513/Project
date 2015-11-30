@@ -146,7 +146,7 @@ def move_others():
                 et.attack(['attack', 'ash'], 'bubble')
             elif 'ember' in move:
                 et.attack(['attack', 'ash'], 'ember')
-             elif 'posionsting' in move:
+            elif 'posionsting' in move:
                 et.attack(['attack', 'ash'], 'posionsting')
             elif 'slash' in move:
                 et.attack(['attack', 'ash'], 'slash')
