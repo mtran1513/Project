@@ -181,7 +181,7 @@ class Trainer():
             print('\n{} what?\n'.format(
                 command[0][0].upper() + command[0][1:]))
             return
-         for thing in self.inventory:
+        for thing in self.inventory:
             if command[1] == thing.name:
                 self.health += thing.modifier
                 self.inventory.remove(thing)
