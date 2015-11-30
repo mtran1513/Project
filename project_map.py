@@ -157,7 +157,7 @@ def move_others():
             elif 'dig' in move:
                 et.attack(['attack', 'ash'], 'dig')
             elif 'bonemerang' in move:
-                et.attack(['attack', 'ash'], 'bonemerang')\
+                et.attack(['attack', 'ash'], 'bonemerang')
             elif 'irontail' in move:
                 et.attack(['attack', 'ash'], 'irontail')
 
