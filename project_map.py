@@ -16,7 +16,14 @@ starters = []
 bulb = Pokemon('bulbasaur', route_1, {'absorb': 5}, 'gary\'s grass starter')
 squirt = Pokemon('squirtle', route_1, {'bubble': 5}, 'gary\'s water starter')
 charm = Pokemon('charmander', route_1, {'ember': 5}, 'gary\'s fire starter')
-pika = Pokemon('pikachu', route_2, {'shock': 20}, 'mike\'s pikachu')
+weedle2 = Pokemon('weedle', v_forest1, {'poisonsting': 20}, 'bryce\'s hairy bug pokemon')
+pika = Pokemon('pikachu', route_2, {'volttackle': 20}, 'mike\'s pikachu')
+scyth = Pokemon('scyther', V_forest6, {'slash': 35}, 'dillon\'s mantis pokemon')
+cubone = Pokemon('cubone', pcg7, {'bonemerang': 36}, 'grant\'s lonely pokemon')
+onix = Pokemon('onix', pcg9, {'irontail': 40,}, 'brock\'s rock snake pokemon')
+diglett = Pokemon('diglett', pcg4, {'dig': 35,}, 'david\'s mole pokemon')
+butterfree = Pokemon('butterfree', v_forrest6, {'charm': 1}, 'zak\'s butterfly pokemon')
+
 bulbasaur = Pokemon('bulbasaur', oak, {'absorb': 20}, 'The grass starter')
 squirtle = Pokemon('squirtle', oak, {'bubble': 20}, 'The water starter')
 charmander = Pokemon('charmander', oak, {'ember': 20}, 'The fire starter')
@@ -25,15 +32,10 @@ pidgey = Pokemon('pidgey', route_1, {'gust': 20, 'tackle': 15}, 'tiny bird pokem
 rattata = Pokemon('rattata', route_1, {'tackle': 20}, 'mouse pokemon')
 caterpie = Pokemon('caterpie', v_forest2, {'tackle': 20}, 'worm pokemon')
 weedle = Pokemon('weedle', v_forest2, {'posionsting': 20}, 'hairy bug pokemon')
-metapod = Pokemon('metapod', v_forest3, {'stringshot': 10}, 'cocoon pokemon')
+metapod = Pokemon('metapod', v_forest3, {'harden': 5}, 'cocoon pokemon')
 kakuna = Pokemon('kakuna', v_forest5, {'harden': 5}, 'cocoon  pokemon')
-pikachu = Pokemon('pikachu', v_forest6, {'shock': 30, 'tackle': 20}, 'mouse  pokemon')
-scyther = Pokemon('scyther', V_forest6, {'slash': 35, 'cut': 25}, 'mantis pokemon')
-# cubone = 
-# onix = 
-# diglett = 
-# butterfree = 
-
+scyther = Pokemon('scyther', V_forest6, {'slash': 35, 'cut': 20}, 'mantis pokemon'
+pikachu = Pokemon('pikachu', v_forest6, {'volttackle': 30, 'tackle': 20}, 'mouse  pokemon')
 
 oak.add_pokemon(bulbasaur)
 oak.add_pokemon(squirtle)
@@ -51,11 +53,11 @@ rb1.location = route_1
 rb1.inventory = [potion] 
 
 bt1 = Trainer('bug_trainer_bryce')
-bt1.weapon = weedle
+bt1.weapon = weedle2
 bt1.location = v_forrest1
 
 bt2 = Trainer('bug_trainer_dillon')
-bt2.weapon = scyther
+bt2.weapon = scyth
 bt2.location = v_forrest4
 bt2.inventory = [potion]
 
@@ -101,3 +103,18 @@ def move_others():
                 et.attack(['attack', 'ash'], 'bubble')
             elif 'ember' in move:
                 et.attack(['attack', 'ash'], 'ember')
+             elif 'posionsting' in move:
+                et.attack(['attack', 'ash'], 'posionsting')
+            elif 'slash' in move:
+                et.attack(['attack', 'ash'], 'slash')
+            elif 'charm' in move:
+                et.attack(['attack', 'ash'], 'charm')
+            elif 'volttackle' in move:
+                et.attack(['attack', 'ash'], 'volttackle')
+            elif 'dig' in move:
+                et.attack(['attack', 'ash'], 'dig')
+            elif 'bonemerang' in move:
+                et.attack(['attack', 'ash'], 'bonemerang')\
+            elif 'irontail' in move:
+                et.attack(['attack', 'ash'], 'irontail')
+
