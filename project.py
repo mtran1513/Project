@@ -26,6 +26,8 @@ def main():
             player.remove_from_inventory(command)
         elif command[0] == 'list':
             print(player)
+        elif command[0] == 'use':
+            player.use(command)
         elif command[0] == 'moves':
             if player.weapon == None:
                 print('\nYou have not chosen a pokemon!\n')
@@ -52,7 +54,7 @@ def main():
 
 def command_help():
     output = '\n\nCommands: go, look, list, drop, get, choose, moves,'
-    output += ' attack, kill, health, help, and quit.\n'
+    output += ' attack, kill, health, use, help, and quit.\n'
     return output
 
 
